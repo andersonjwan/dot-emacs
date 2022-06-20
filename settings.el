@@ -18,7 +18,7 @@
 ;; Create and set backup path
 (defvar settings--backup-path (concat user-emacs-directory "backups"))
 (unless (file-directory-p settings--backup-path)
-  (make-directory settings-backup-path t))
+  (make-directory settings--backup-path t))
 
 (setq backup-directory-alist `(("." . ,settings--backup-path)))
 
