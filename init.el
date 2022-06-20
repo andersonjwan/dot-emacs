@@ -7,7 +7,8 @@
 ;; Keywords: initialization, dot-emacs, configuration, custom
 ;; Homepage: https://github.com/andersonjwan/.emacs.d
 
-(load "~/.emacs.d/custom.el")
-(load "~/.emacs.d/packages.el")
+;; Load configuration
+(load (concat user-emacs-directory "settings.el"))
+(load (concat user-emacs-directory "packages.el"))
 
 ;;; init.el ends here
