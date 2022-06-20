@@ -8,6 +8,7 @@
 ;; Homepage: https://github.com/andersonjwan/.emacs.d
 
 ;;; Package Management
+
 (require 'package)
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/") t)
