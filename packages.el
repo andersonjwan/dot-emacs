@@ -28,4 +28,9 @@
 
 ;;; Packages
 
+(use-package smartparens
+  :ensure t
+  :init (require 'smartparens-config)
+  :config (smartparens-global-mode t))
+
 ;;; packages.el ends here
