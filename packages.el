@@ -28,9 +28,25 @@
 
 ;;; Packages
 
+(use-package company
+  ;; For more information, see
+  ;; https://github.com/company-mode/company-mode
+  :ensure t
+  :hook (prog-mode . company-mode)
+  :custom
+  (company-minimum-prefix-length 2)
+  (company-selection-wrap-around t)
+  (company-show-numbers t)
+  (company-tooltip-align-annotations t)
+  (company-tooltip-limit 10)
+  (company-tooltip-flip-when-above t))
+
 (use-package smartparens
+  ;; For more information, see
+  ;; https://github.com/Fuco1/smartparens
   :ensure t
   :init (require 'smartparens-config)
+  :hook (prog-mode . smartparens-strict-mode)
   :config (smartparens-global-mode t))
 
 ;;; packages.el ends here
