@@ -49,4 +49,10 @@
   :hook (prog-mode . smartparens-strict-mode)
   :config (smartparens-global-mode t))
 
+(use-package which-key
+  ;; For more information, see
+  ;; https://github.com/justbur/emacs-which-key
+  :ensure t
+  :config (which-key-mode))
+
 ;;; packages.el ends here
