@@ -39,14 +39,7 @@
   ;; For more information, see
   ;; https://github.com/company-mode/company-mode
   :ensure t
-  :hook (prog-mode . company-mode)
-  :custom
-  (company-minimum-prefix-length 2)
-  (company-selection-wrap-around t)
-  (company-show-numbers t)
-  (company-tooltip-align-annotations t)
-  (company-tooltip-limit 10)
-  (company-tooltip-flip-when-above t))
+  :hook (prog-mode . company-mode))
 
 (use-package flycheck
   ;; For more information, see
@@ -59,16 +52,34 @@
   ;; https://github.com/emacs-lsp/lsp-mode/
   :ensure t
   :custom (lsp-keymap-prefix "C-c l")
-  :hook (lsp-mode . lsp-enable-which-key-integration)
+  :hook lsp-enable-which-key-integration
   :commands lsp)
+
+(use-package lsp-ui
+  ;; For more information, see
+  ;; https://github.com/emacs-lsp/lsp-ui
+  :ensure t)
 
 (use-package smartparens
   ;; For more information, see
   ;; https://github.com/Fuco1/smartparens
   :ensure t
   :init (require 'smartparens-config)
-  :hook (prog-mode . smartparens-strict-mode)
-  :config (smartparens-global-mode t))
+  :hook (prog-mode . smartparens-strict-mode))
+
+(use-package tree-sitter
+  ;; For more information, see
+  ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
+  :ensure t
+  :after tree-sitter-langs
+  :config (global-tree-sitter-mode)                   ; enable whenever possible
+  :hook (tree-sitter-after-on . tree-sitter-hl-mode)) ; syntax highlighting
+
+(use-package tree-sitter-langs
+  ;; For more information, see
+  ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
+  :ensure t)
+;;  :config (require 'tree-sitter-langs))
 
 (use-package which-key
   ;; For more information, see
