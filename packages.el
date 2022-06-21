@@ -79,7 +79,6 @@
   ;; For more information, see
   ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
   :ensure t)
-;;  :config (require 'tree-sitter-langs))
 
 (use-package which-key
   ;; For more information, see
