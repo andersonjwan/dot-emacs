@@ -7,6 +7,13 @@
 ;; Keywords: packages, dot-emacs, configuration, custom
 ;; Homepage: https://github.com/andersonjwan/.emacs.d
 
+;;; Commentary:
+;;
+;; This file contains package configurations for my own custom
+;; Emacs installation.
+
+;;; Code:
+
 ;;; Package Management
 
 (require 'package)
@@ -40,6 +47,12 @@
   (company-tooltip-align-annotations t)
   (company-tooltip-limit 10)
   (company-tooltip-flip-when-above t))
+
+(use-package flycheck
+  ;; For more information, see
+  ;; https://github.com/flycheck/flycheck
+  :ensure t
+  :hook (prog-mode . flycheck-mode))
 
 (use-package lsp-mode
   ;; For more information, see
