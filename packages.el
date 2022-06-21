@@ -41,6 +41,14 @@
   (company-tooltip-limit 10)
   (company-tooltip-flip-when-above t))
 
+(use-package lsp-mode
+  ;; For more information, see
+  ;; https://github.com/emacs-lsp/lsp-mode/
+  :ensure t
+  :custom (lsp-keymap-prefix "C-c l")
+  :hook (lsp-mode . lsp-enable-which-key-integration)
+  :commands lsp)
+
 (use-package smartparens
   ;; For more information, see
   ;; https://github.com/Fuco1/smartparens
