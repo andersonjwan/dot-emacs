@@ -29,6 +29,6 @@
   (doom-themes-enable-italic t))
 
 ;; Set startup theme
-(load-theme 'doom-one t)
+(load-theme 'doom-vibrant t)
 
 ;;; appearance.el ends here
