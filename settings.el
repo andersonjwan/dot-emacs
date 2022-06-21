@@ -7,11 +7,12 @@
 ;; Keywords: customization, dot-emacs, configuration, custom
 ;; Homepage: https://github.com/andersonjwan/.emacs.d
 
-;;; Interface Customizations
+;;; Commentary:
+;;
+;; This file contains general setting customizations for
+;; my own custom Emacs installation.
 
-(tool-bar-mode 0)   ; hide the tool bar
-(menu-bar-mode 0)   ; hide the menu bar
-(scroll-bar-mode 0) ; hide the scroll bar
+;;; Code:
 
 ;;; Backup Settings
 
