@@ -51,7 +51,7 @@
   ;; For more information, see
   ;; https://github.com/emacs-lsp/lsp-mode/
   :ensure t
-  :custom (lsp-keymap-prefix "C-c l")
+  :bind-keymap ("C-c l" . lsp-command-map)
   :hook lsp-enable-which-key-integration
   :commands lsp)
 
@@ -59,6 +59,23 @@
   ;; For more information, see
   ;; https://github.com/emacs-lsp/lsp-ui
   :ensure t)
+
+(use-package rust-mode
+  ;; For more information, see
+  ;; https://github.com/rust-lang/rust-mode
+  :ensure t
+  :bind-keymap ("C-c C-c" . rust-mode-map)
+  :hook prettify-symbols-mode
+  :hook lsp)
+
+(use-package rustic
+  ;; For more information, see
+  ;; https://github.com/brotzeit/rustic
+  :ensure t
+  :custom
+  (rustic-format-trigger 'on-save)
+  (lsp-rust-analyzer-server-display-inlay-hints t) ; enable inlay hints
+  (lsp-rust-analyzer-inlay-hint t))                ; display inlay hints when possible
 
 (use-package smartparens
   ;; For more information, see
