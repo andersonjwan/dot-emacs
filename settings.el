@@ -35,4 +35,7 @@
       auto-save-timeout 30          ; save buffers after t idle seconds
       auto-save-interval 500)       ; save buffers after n keystrokes
 
+;; Programming Settings
+(add-hook 'prog-mode-hook #'display-line-numbers-mode) ; display line numbers
+
 ;;; settings.el ends here
