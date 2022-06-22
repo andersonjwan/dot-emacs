@@ -68,6 +68,7 @@
   ;; For more information, see
   ;; https://github.com/rust-lang/rust-mode
   :ensure t
+  :mode ("\\.rs\\'" . rust-mode)
   :bind-keymap ("C-c C-c" . rust-mode-map)
   :hook (rust-mode . prettify-symbols-mode)
   :hook (rust-mode . lsp))
@@ -76,6 +77,7 @@
   ;; For more information, see
   ;; https://github.com/brotzeit/rustic
   :ensure t
+  :mode ("\\.rs\\'" . rustic-mode)
   :custom
   (rustic-format-trigger 'on-save)
   (lsp-rust-analyzer-server-display-inlay-hints t) ; enable inlay hints
