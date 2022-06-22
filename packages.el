@@ -53,6 +53,13 @@
   :ensure t
   :custom (lsp-keymap-prefix "C-c l") ; https://emacs.stackexchange.com/q/60784/38330
 
+  ;; Rust
+  (lsp-rust-clippy-preference "on")                ; use clippy linting for all crates in workspace
+  (lsp-rust-analyzer-server-display-inlay-hints t) ; enable inlay hints
+  (lsp-rust-analyzer-inlay-hint t)                 ; display inlay hints when possible
+  (lsp-rust-analyzer-cargo-watch-command "clippy") ; watch code with clippy
+  (lsp-rust-analyzer-display-parameter-hints t)    ; display function call parameter names
+
   ;; For which-key integration to work, the `lsp-keymap-prefix' variable
   ;; must be used to change the keymap keybinding, and the `lsp-mode-hook' must be
   ;; used explicitly.
@@ -79,9 +86,7 @@
   :ensure t
   :mode ("\\.rs\\'" . rustic-mode)
   :custom
-  (rustic-format-trigger 'on-save)
-  (lsp-rust-analyzer-server-display-inlay-hints t) ; enable inlay hints
-  (lsp-rust-analyzer-inlay-hint t))                ; display inlay hints when possible
+  (rustic-format-trigger 'on-save))
 
 (use-package smartparens
   ;; For more information, see
