@@ -69,8 +69,8 @@
   ;; https://github.com/rust-lang/rust-mode
   :ensure t
   :bind-keymap ("C-c C-c" . rust-mode-map)
-  :hook prettify-symbols-mode
-  :hook lsp)
+  :hook (rust-mode . prettify-symbols-mode)
+  :hook (rust-mode . lsp))
 
 (use-package rustic
   ;; For more information, see
