@@ -51,8 +51,12 @@
   ;; For more information, see
   ;; https://github.com/emacs-lsp/lsp-mode/
   :ensure t
-  :bind-keymap ("C-c l" . lsp-command-map)
-  :hook lsp-enable-which-key-integration
+  :custom (lsp-keymap-prefix "C-c l") ; https://emacs.stackexchange.com/q/60784/38330
+
+  ;; For which-key integration to work, the `lsp-keymap-prefix' variable
+  ;; must be used to change the keymap keybinding, and the `lsp-mode-hook' must be
+  ;; used explicitly.
+  :hook (lsp-mode . lsp-enable-which-key-integration)
   :commands lsp)
 
 (use-package lsp-ui
