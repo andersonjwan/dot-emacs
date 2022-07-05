@@ -93,7 +93,7 @@
   ;; https://github.com/Fuco1/smartparens
   :ensure t
   :init (require 'smartparens-config)
-  :hook (prog-mode . smartparens-strict-mode))
+  :hook (prog-mode . smartparens-mode))
 
 (use-package tree-sitter
   ;; For more information, see
