@@ -71,6 +71,13 @@
   ;; https://github.com/emacs-lsp/lsp-ui
   :ensure t)
 
+(use-package multiple-cursors
+  ;; For more information, see
+  ;; https://github.com/magnars/multiple-cursors.el
+  :disabled
+  :ensure t
+  :bind ("C-S-s" 'mc/edit-lines))
+
 (use-package rust-mode
   ;; For more information, see
   ;; https://github.com/rust-lang/rust-mode
