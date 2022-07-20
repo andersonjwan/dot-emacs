@@ -121,4 +121,10 @@
   :ensure t
   :config (which-key-mode))
 
+(use-package yaml-mode
+  ;; For more information, see
+  ;; https://github.com/yoshiki/yaml-mode
+  :ensure t
+  :mode ("\\.yml\\'" . yaml-mode))
+
 ;;; packages.el ends here
