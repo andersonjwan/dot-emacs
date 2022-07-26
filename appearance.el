@@ -20,6 +20,9 @@
 (menu-bar-mode 0)   ; hide the menu bar
 (scroll-bar-mode 0) ; hide the scroll bar
 
+;; variables
+(setq inhibit-startup-screen t) ; disable splash screen
+
 ;;; Themes
 
 (use-package doom-themes
