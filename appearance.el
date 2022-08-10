@@ -23,33 +23,15 @@
 ;; variables
 (setq inhibit-startup-screen t) ; disable splash screen
 
-;;; Icons
-
-(use-package all-the-icons
-  ;; For more information, see
-  ;; https://github.com/domtronn/all-the-icons.el
-  :ensure t
-  :if (display-graphic-p))
-
-
 ;;; Themes
 
 (use-package doom-themes
-  ;; For more information, see
-  ;; https://github.com/doomemacs/themes
   :ensure t
   :custom
   (doom-themes-enable-bold t)
   (doom-themes-enable-italic t))
 
-(use-package kaolin-themes
-  ;; For more information, see
-  ;; https://github.com/ogdenwebb/emacs-kaolin-themes
-  :ensure t
-  :config
-  (kaolin-treemacs-theme))
-
 ;; Set startup theme
-(load-theme 'kaolin-dark t)
+(load-theme 'doom-vibrant t)
 
 ;;; appearance.el ends here
