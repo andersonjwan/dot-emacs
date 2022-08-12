@@ -35,6 +35,16 @@
 
 ;;; Packages
 
+(use-package tex
+  ;; For more information, see
+  ;; https://www.gnu.org/software/auctex/index.html
+  :ensure auctex
+  :mode ("\\.tex\\'" . latex-mode)
+  :custom
+  (TeX-auto-save t)
+  (TeX-master nil)    ; prompt for master file for multifile document structure
+  (TeX-parse-self t))
+
 (use-package company
   ;; For more information, see
   ;; https://github.com/company-mode/company-mode
