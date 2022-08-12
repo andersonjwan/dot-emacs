@@ -22,6 +22,7 @@
 
 ;; variables
 (setq inhibit-startup-screen t) ; disable splash screen
+(setq use-file-dialog nil)      ; disable file dialog selector
 
 ;;; Themes
 
