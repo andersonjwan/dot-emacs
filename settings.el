@@ -14,6 +14,14 @@
 
 ;;; Code:
 
+;;; Global Variables
+;; Customized `dired-mode' output.
+;;
+;; The `dired-mode' takes advantange of the `/usr/bin/ls' command to display
+;; directory contents. Therefore, to modify the output, the flags/options present
+;; for the called commmand are set.
+(setq dired-listing-switches "-l --all --group-directories-first")
+
 ;;; Backup Settings
 
 ;; Create and set backup path
