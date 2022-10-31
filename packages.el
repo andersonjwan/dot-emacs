@@ -18,7 +18,7 @@
 
 (require 'package)
 (add-to-list 'package-archives
-	     '("melpa" . "https://melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 
 (package-initialize)
 
@@ -40,7 +40,8 @@
   ;; https://www.gnu.org/software/auctex/index.html
   :ensure auctex
   :mode ("\\.tex\\'" . latex-mode)
-  :hook (LaTeX-mode . turn-on-reftex) ; turn on reftex minor mode
+  :hook ((LaTeX-mode . turn-on-reftex) ; turn on reftex minor mode
+         (LaTeX-mode . company-mode))  ; turn on company mode
   :custom
   (TeX-auto-save t)
   (TeX-master nil) ; prompt for master file for multifile document structure
