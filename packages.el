@@ -40,9 +40,10 @@
   ;; https://www.gnu.org/software/auctex/index.html
   :ensure auctex
   :mode ("\\.tex\\'" . latex-mode)
+  :hook turn-on-reftex ; turn on reftex minor mode
   :custom
   (TeX-auto-save t)
-  (TeX-master nil)    ; prompt for master file for multifile document structure
+  (TeX-master nil) ; prompt for master file for multifile document structure
   (TeX-parse-self t))
 
 (use-package company
@@ -87,6 +88,16 @@
   :disabled
   :ensure t
   :bind ("C-S-s" 'mc/edit-lines))
+
+(use-package reftek
+  ;; For more information, see
+  ;; https://www.gnu.org/software/auctex/manual/reftex.pdf
+  :defer t
+  :commands turn-on-reftek
+  :custom
+  ;; This setting configures additional settings from AUCTeX that are set for
+  ;; many popular packages (i.e., an easy configuration).
+  (reftex-plug-into-AUCTeX t))
 
 (use-package rust-mode
   ;; For more information, see
