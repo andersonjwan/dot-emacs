@@ -40,7 +40,7 @@
   ;; https://www.gnu.org/software/auctex/index.html
   :ensure auctex
   :mode ("\\.tex\\'" . latex-mode)
-  :hook turn-on-reftex ; turn on reftex minor mode
+  :hook (LaTeX-mode . turn-on-reftex) ; turn on reftex minor mode
   :custom
   (TeX-auto-save t)
   (TeX-master nil) ; prompt for master file for multifile document structure
