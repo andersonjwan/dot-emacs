@@ -33,8 +33,15 @@
 (eval-when-compile
   (require 'use-package))
 
+(use-package load-relative
+  ;; Support loading files relatively.
+  ;;
+  ;; For more information, see
+  ;; https://github.com/rocky/emacs-load-relative
+  :ensure t)
+
 ;;; Packages
-(load "packages/prog.el")
+(load-relative "packages/prog.el")
 
 (use-package company
   ;; Support buffer auto-completion.
