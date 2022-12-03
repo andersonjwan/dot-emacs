@@ -34,20 +34,7 @@
   (require 'use-package))
 
 ;;; Packages
-
-(use-package tex
-  ;; Support LaTeX editing.
-  ;;
-  ;; For more information, see
-  ;; https://www.gnu.org/software/auctex/index.html
-  :ensure auctex
-  :mode ("\\.tex\\'" . latex-mode)
-  :hook ((LaTeX-mode . turn-on-reftex) ; turn on reftex minor mode
-         (LaTeX-mode . company-mode))  ; turn on company mode
-  :custom
-  (TeX-auto-save t)
-  (TeX-master nil) ; prompt for master file for multifile document structure
-  (TeX-parse-self t))
+(load "packages/prog.el")
 
 (use-package company
   ;; Support buffer auto-completion.
@@ -56,42 +43,6 @@
   ;; https://github.com/company-mode/company-mode
   :ensure t
   :hook (prog-mode . company-mode))
-
-(use-package flycheck
-  ;; Support proper syntax checking.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/flycheck/flycheck
-  :ensure t
-  :hook (prog-mode . flycheck-mode))
-
-(use-package lsp-mode
-  ;; Support for Language Server Protocal (LSP) utilities.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/emacs-lsp/lsp-mode/
-  :ensure t
-  :custom (lsp-keymap-prefix "C-c l") ; https://emacs.stackexchange.com/q/60784/38330
-
-  ;; Rust
-  (lsp-rust-clippy-preference "on")                ; use clippy linting for all crates in workspace
-  (lsp-rust-analyzer-server-display-inlay-hints t) ; enable inlay hints
-  (lsp-rust-analyzer-inlay-hint t)                 ; display inlay hints when possible
-  (lsp-rust-analyzer-cargo-watch-command "clippy") ; watch code with clippy
-  (lsp-rust-analyzer-display-parameter-hints t)    ; display function call parameter names
-
-  ;; For which-key integration to work, the `lsp-keymap-prefix' variable
-  ;; must be used to change the keymap keybinding, and the `lsp-mode-hook' must be
-  ;; used explicitly.
-  :hook (lsp-mode . lsp-enable-which-key-integration)
-  :commands lsp)
-
-(use-package lsp-ui
-  ;; Display LSP information within the buffer.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/emacs-lsp/lsp-ui
-  :ensure t)
 
 (use-package multiple-cursors
   ;; Support multiple cursors within a buffer.
@@ -102,39 +53,6 @@
   :ensure t
   :bind ("C-S-s" 'mc/edit-lines))
 
-(use-package reftek
-  ;; Support LaTeX labels, references, and citations.
-  ;;
-  ;; For more information, see
-  ;; https://www.gnu.org/software/auctex/manual/reftex.pdf
-  :defer t
-  :commands turn-on-reftek
-  :custom
-  ;; This setting configures additional settings from AUCTeX that are set for
-  ;; many popular packages (i.e., an easy configuration).
-  (reftex-plug-into-AUCTeX t))
-
-(use-package rust-mode
-  ;; Support editing of Rust code.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/rust-lang/rust-mode
-  :ensure t
-  :mode ("\\.rs\\'" . rust-mode)
-  :bind-keymap ("C-c C-c" . rust-mode-map)
-  :hook (rust-mode . prettify-symbols-mode)
-  :hook (rust-mode . lsp))
-
-(use-package rustic
-  ;; Support additional features for Rust code based on `rust-mode'.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/brotzeit/rustic
-  :ensure t
-  :mode ("\\.rs\\'" . rustic-mode)
-  :custom
-  (rustic-format-trigger 'on-save))
-
 (use-package smartparens
   ;; Balance parentheses, brackets, braces, etc.
   ;;
@@ -144,23 +62,6 @@
   :init (require 'smartparens-config)
   :hook (prog-mode . smartparens-mode))
 
-(use-package tree-sitter
-  ;; Enable smarter syntax highlighting capabilities.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
-  :ensure t
-  :after tree-sitter-langs
-  :config (global-tree-sitter-mode)                   ; enable whenever possible
-  :hook (tree-sitter-after-on . tree-sitter-hl-mode)) ; syntax highlighting
-
-(use-package tree-sitter-langs
-  ;; Support a variety of programming languages for `tree-sitter'.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
-  :ensure t)
-
 (use-package which-key
   ;; Support Emacs key combination tipping.
   ;;
@@ -168,13 +69,5 @@
   ;; https://github.com/justbur/emacs-which-key
   :ensure t
   :config (which-key-mode))
-
-(use-package yaml-mode
-  ;; Support editing of YAML code.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/yoshiki/yaml-mode
-  :ensure t
-  :mode ("\\.yml\\'" . yaml-mode))
 
 ;;; packages.el ends here
