@@ -36,6 +36,8 @@
 ;;; Packages
 
 (use-package tex
+  ;; Support LaTeX editing.
+  ;;
   ;; For more information, see
   ;; https://www.gnu.org/software/auctex/index.html
   :ensure auctex
@@ -48,18 +50,24 @@
   (TeX-parse-self t))
 
 (use-package company
+  ;; Support buffer auto-completion.
+  ;;
   ;; For more information, see
   ;; https://github.com/company-mode/company-mode
   :ensure t
   :hook (prog-mode . company-mode))
 
 (use-package flycheck
+  ;; Support proper syntax checking.
+  ;;
   ;; For more information, see
   ;; https://github.com/flycheck/flycheck
   :ensure t
   :hook (prog-mode . flycheck-mode))
 
 (use-package lsp-mode
+  ;; Support for Language Server Protocal (LSP) utilities.
+  ;;
   ;; For more information, see
   ;; https://github.com/emacs-lsp/lsp-mode/
   :ensure t
@@ -79,11 +87,15 @@
   :commands lsp)
 
 (use-package lsp-ui
+  ;; Display LSP information within the buffer.
+  ;;
   ;; For more information, see
   ;; https://github.com/emacs-lsp/lsp-ui
   :ensure t)
 
 (use-package multiple-cursors
+  ;; Support multiple cursors within a buffer.
+  ;;
   ;; For more information, see
   ;; https://github.com/magnars/multiple-cursors.el
   :disabled
@@ -91,6 +103,8 @@
   :bind ("C-S-s" 'mc/edit-lines))
 
 (use-package reftek
+  ;; Support LaTeX labels, references, and citations.
+  ;;
   ;; For more information, see
   ;; https://www.gnu.org/software/auctex/manual/reftex.pdf
   :defer t
@@ -101,6 +115,8 @@
   (reftex-plug-into-AUCTeX t))
 
 (use-package rust-mode
+  ;; Support editing of Rust code.
+  ;;
   ;; For more information, see
   ;; https://github.com/rust-lang/rust-mode
   :ensure t
@@ -110,6 +126,8 @@
   :hook (rust-mode . lsp))
 
 (use-package rustic
+  ;; Support additional features for Rust code based on `rust-mode'.
+  ;;
   ;; For more information, see
   ;; https://github.com/brotzeit/rustic
   :ensure t
@@ -118,6 +136,8 @@
   (rustic-format-trigger 'on-save))
 
 (use-package smartparens
+  ;; Balance parentheses, brackets, braces, etc.
+  ;;
   ;; For more information, see
   ;; https://github.com/Fuco1/smartparens
   :ensure t
@@ -125,6 +145,8 @@
   :hook (prog-mode . smartparens-mode))
 
 (use-package tree-sitter
+  ;; Enable smarter syntax highlighting capabilities.
+  ;;
   ;; For more information, see
   ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
   :ensure t
@@ -133,17 +155,23 @@
   :hook (tree-sitter-after-on . tree-sitter-hl-mode)) ; syntax highlighting
 
 (use-package tree-sitter-langs
+  ;; Support a variety of programming languages for `tree-sitter'.
+  ;;
   ;; For more information, see
   ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
   :ensure t)
 
 (use-package which-key
+  ;; Support Emacs key combination tipping.
+  ;;
   ;; For more information, see
   ;; https://github.com/justbur/emacs-which-key
   :ensure t
   :config (which-key-mode))
 
 (use-package yaml-mode
+  ;; Support editing of YAML code.
+  ;;
   ;; For more information, see
   ;; https://github.com/yoshiki/yaml-mode
   :ensure t
