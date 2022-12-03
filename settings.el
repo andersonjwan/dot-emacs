@@ -45,5 +45,6 @@
 
 ;; Programming Settings
 (add-hook 'prog-mode-hook #'display-line-numbers-mode) ; display line numbers
+(add-hook 'prog-mode-hook #'column-number-mode) ; display column numbers
 
 ;;; settings.el ends here
