@@ -26,14 +26,4 @@
   :bind-keymap ("C-c C-c" . rust-mode-map)
   :hook (rust-mode . prettify-symbols-mode))
 
-(use-package rustic
-  ;; Support additional features for Rust code based on `rust-mode'.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/brotzeit/rustic
-  :ensure t
-  :mode ("\\.rs\\'" . rustic-mode)
-  :custom
-  (rustic-format-trigger 'on-save))
-
 ;;; rust.el ends here
