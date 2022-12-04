@@ -24,8 +24,7 @@
   :ensure t
   :mode ("\\.rs\\'" . rust-mode)
   :bind-keymap ("C-c C-c" . rust-mode-map)
-  :hook (rust-mode . prettify-symbols-mode)
-  :hook (rust-mode . lsp))
+  :hook (rust-mode . prettify-symbols-mode))
 
 (use-package rustic
   ;; Support additional features for Rust code based on `rust-mode'.
