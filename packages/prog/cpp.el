@@ -15,22 +15,5 @@
 ;;; Code:
 
 ;;; Package Management
-(use-package clang-format
-  ;;; Support code formatting using `clang-format'.
-  ;;;
-  ;;; For more information, see
-  ;;; https://github.com/llvm-mirror/clang/blob/master/tools/clang-format/clang-format.el
-  :ensure t)
-
-(use-package clang-format+
-  ;;; Support feature niceties for `clang-format'.
-  ;;;
-  ;;; Most importantly, this provides a nice minor mode (`clang-format+-mode')
-  ;;; that enables on-save formatting configurations.
-  ;;;
-  ;;; For more information, see
-  ;;; https://github.com/SavchenkoValeriy/emacs-clang-format-plus
-  :ensure t
-  :hook (c-mode-common . clang-format+-mode))
 
 ;;; cpp.el ends here

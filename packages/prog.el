@@ -40,6 +40,8 @@
   ;; https://github.com/emacs-lsp/lsp-mode/
   :ensure t
 
+  :hook (before-save . lsp-format-buffer)
+
   ;; Enable LSP
   :hook (c++-mode . lsp)
   :hook (rust-mode . lsp)
