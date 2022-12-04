@@ -41,10 +41,10 @@
   :custom (lsp-keymap-prefix "C-c l") ; https://emacs.stackexchange.com/q/60784/38330
 
   ;; C++
-  :hook(c++-mode . #'lsp) ; enable LSP
+  :hook (c++-mode . lsp) ; enable LSP
 
   ;; Rust
-  :hook(rust-mode . #'lsp) ; enable LSP
+  :hook (rust-mode . lsp) ; enable LSP
   (lsp-rust-clippy-preference "on")                ; use clippy linting for all crates in workspace
   (lsp-rust-analyzer-server-display-inlay-hints t) ; enable inlay hints
   (lsp-rust-analyzer-inlay-hint t)                 ; display inlay hints when possible
