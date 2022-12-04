@@ -30,6 +30,7 @@
   ;;;
   ;;; For more information, see
   ;;; https://github.com/SavchenkoValeriy/emacs-clang-format-plus
-  :ensure t)
+  :ensure t
+  :hook (c-mode-common . clang-format+-mode))
 
 ;;; cpp.el ends here
