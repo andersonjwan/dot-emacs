@@ -16,13 +16,4 @@
 
 ;;; Package Management
 
-(use-package flycheck-clang-tidy
-  ;; Enable C/C++ linting with `clang-tidy'.
-  ;;
-  ;; For more information, see
-  ;; https://github.com/ch1bo/flycheck-clang-tidy
-  :ensure t
-  :after flycheck
-  :hook (flycheck-mode . flycheck-clang-tidy-setup))
-
 ;;; cpp.el ends here
