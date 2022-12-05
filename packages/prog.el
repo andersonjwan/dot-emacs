@@ -49,7 +49,7 @@
   :custom (lsp-keymap-prefix "C-c l") ; https://emacs.stackexchange.com/q/60784/38330
 
   ;; C++
-  (lsp-clients-clangd-args . '("--clang-tidy"))
+  ;; (lsp-clients-clangd-args . '("--clang-tidy"))
 
   ;; Rust
   (lsp-rust-clippy-preference "on")                ; use clippy linting for all crates in workspace
