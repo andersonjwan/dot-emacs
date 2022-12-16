@@ -16,12 +16,12 @@
 
 ;;; Package Management
 
-(use-package antlr
+(use-package antlr-mode
   ;; Support ANTLR editing.
   ;;
   ;; For more information, see
   ;; https://antlr-mode.sourceforge.net/
   :ensure t
-  :mode ("\\.g4\\'" . antlr-mode))
+  :mode "\\.g4\\'")
 
 ;;; antlr.el ends here
