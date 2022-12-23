@@ -22,6 +22,7 @@
 ;;; languages.
 (load-relative "prog/antlr.el") ; ANTLR
 (load-relative "prog/cpp.el")   ; C++
+(load-relative "prog/cmake.el") ; CMake
 (load-relative "prog/rust.el")  ; Rust
 (load-relative "prog/latex.el") ; LaTeX
 (load-relative "prog/yaml.el")  ; YAML
