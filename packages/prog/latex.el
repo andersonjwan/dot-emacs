@@ -26,8 +26,9 @@
   :hook ((LaTeX-mode . turn-on-reftex) ; turn on reftex minor mode
          (LaTeX-mode . company-mode))  ; turn on company mode
   :custom
+  (LaTeX-indent-level 4) ; set default indentation size to 4 spaces
   (TeX-auto-save t)
-  (TeX-master nil) ; prompt for master file for multifile document structure
+  (TeX-master nil)       ; prompt for master file for multifile document structure
   (TeX-parse-self t))
 
 (use-package reftek
