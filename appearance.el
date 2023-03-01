@@ -32,6 +32,9 @@
   (doom-themes-enable-bold t)
   (doom-themes-enable-italic t))
 
+(use-package dracula-theme
+  :ensure t)
+
 ;; Set startup theme
 (load-theme 'doom-vibrant t)
 
