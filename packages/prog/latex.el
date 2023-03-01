@@ -23,8 +23,9 @@
   ;; https://www.gnu.org/software/auctex/index.html
   :ensure auctex
   :mode ("\\.tex\\'" . latex-mode)
-  :hook ((LaTeX-mode . turn-on-reftex) ; turn on reftex minor mode
-         (LaTeX-mode . company-mode))  ; turn on company mode
+  :hook ((LaTeX-mode . turn-on-reftex)             ; turn on reftex minor mode
+         (LaTeX-mode . company-mode)               ; turn on company mode
+	 (LaTeX-mode . display-line-numbers-mode)) ; turn on line numbers
   :custom
   (TeX-auto-save t)
   (TeX-master nil) ; prompt for master file for multifile document structure
