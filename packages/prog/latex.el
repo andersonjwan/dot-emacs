@@ -48,6 +48,9 @@
 
 	 ;; Add the `cleveref' package macros to `reftex' referencing style list.
 	 ;;
+	 ;; For more information, see:
+	 ;; https://tex.stackexchange.com/a/119273/263214
+	 ;;
 	 ;; This additional adds it to the TeX symbols, so these references may
 	 ;; also then be referred back to by `reftex'.
 	 (LaTeX-mode . (lambda ()
