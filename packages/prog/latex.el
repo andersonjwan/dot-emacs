@@ -53,7 +53,7 @@
 	 ;;
 	 ;; This additional adds it to the TeX symbols, so these references may
 	 ;; also then be referred back to by `reftex'.
-	 (LaTeX-mode . (lambda ()
+	 (TeX-add-style . (lambda ()
 			 (if (boundp 'reftex-ref-style-alist)
 			     (add-to-list 'reftex-ref-style-alist
 					  '("Cleveref" "cleveref"
