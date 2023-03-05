@@ -29,12 +29,7 @@
   :custom
   (TeX-auto-save t)
   (TeX-master nil) ; prompt for master file for multifile document structure
-  (TeX-parse-self t)
-
-  ;; Automatically insert label for custom environments using RefTex, accordingly.
-  ;;
-  ;; All additional labels must be appended.
-  (LaTeX-label-alist 'LaTeX-label-alist '("definition" . "def:"))) ; `definition' label
+  (TeX-parse-self t))
 
 (use-package reftek
   ;; Support LaTeX labels, references, and citations.
@@ -43,7 +38,13 @@
   ;; https://www.gnu.org/software/auctex/manual/reftex.pdf
   :defer t
   :commands turn-on-reftek
-  :hook (LaTeX-mode . (lambda () (LaTeX-add-environments '("definition" LaTeX-env-label)))) ; auto create
+
+  ;; Add custom `definition' environment to `auctex'.
+  ;;
+  ;; This additionally insert the label automatically whenever the environment is
+  ;; created through `auctex' by `reftek'.
+  :hook (LaTeX-mode . (lambda () (LaTeX-add-environments '("definition" LaTeX-env-label))
+			(add-to-list 'LaTeX-label-alist '("definition" . "def:"))))
   :custom
   ;; This setting configures additional settings from AUCTeX that are set for
   ;; many popular packages (i.e., an easy configuration).
