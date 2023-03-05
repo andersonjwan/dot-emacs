@@ -38,9 +38,15 @@
   ;; https://www.gnu.org/software/auctex/manual/reftex.pdf
   :defer t
   :commands turn-on-reftek
+  :hook ((LaTeX-mode . (LaTeX-add-environments '("definition" LaTeX-env-label)))) ; auto create
   :custom
   ;; This setting configures additional settings from AUCTeX that are set for
   ;; many popular packages (i.e., an easy configuration).
-  (reftex-plug-into-AUCTeX t))
+  (reftex-plug-into-AUCTeX t)
+
+  ;; Custom environments RefTeX should consider.
+  ;;
+  (reftex-label-alist
+   '(("definition" ?d "def:" "~\\ref{%s}" t ("definition", "def.")))))
 
 ;;; latex.el ends here
