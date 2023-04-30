@@ -29,7 +29,9 @@
   :custom
   (TeX-auto-save t)
   (TeX-master nil) ; prompt for master file for multifile document structure
-  (TeX-parse-self t))
+  (TeX-parse-self t)
+  (TeX-indent-open-delimeters "[")
+  (TeX-indent-close-delimeters "]"))
 
 (use-package reftek
   ;; Support LaTeX labels, references, and citations.
