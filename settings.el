@@ -20,7 +20,16 @@
 ;; The `dired-mode' takes advantange of the `/usr/bin/ls' command to display
 ;; directory contents. Therefore, to modify the output, the flags/options present
 ;; for the called commmand are set.
+;;
+;; This setting order folders first followed by files.
 (setq dired-listing-switches "-l --all --group-directories-first")
+
+;;; Enabled Functions
+;; Enable `narrow-to-*' functionality. This includes narrowing to region, defun,
+;; and page.
+(put 'narrow-to-defun 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
+(put 'narrow-to-page 'disabled nil)
 
 ;;; Backup Settings
 
