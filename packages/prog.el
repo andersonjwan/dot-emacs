@@ -50,6 +50,18 @@
 
   :custom (lsp-keymap-prefix "C-c l") ; https://emacs.stackexchange.com/q/60784/38330
 
+  ;; Increase the number of bytes to hold before performing garbage collection.
+  ;;
+  ;; For more information, see the following:
+  ;; https://emacs-lsp.github.io/lsp-mode/page/performance/#adjust-gc-cons-threshold
+  (gc-cons-threshold 100000000)
+
+  ;; Increase the amount of bytes to process by LSP to 1mb.
+  ;;
+  ;; For more information, see the following:
+  ;; https://emacs-lsp.github.io/lsp-mode/page/performance/#increase-the-amount-of-data-which-emacs-reads-from-the-process
+  (read-process-output-max (* 1024 1024))
+
   ;; C++
   ;; (lsp-clients-clangd-args . '("--clang-tidy"))
 
