@@ -20,12 +20,13 @@
 ;;;
 ;;; The set of packages below provides feature support for various programming
 ;;; languages.
-(load-relative "prog/antlr.el") ; ANTLR
-(load-relative "prog/cpp.el")   ; C++
-(load-relative "prog/cmake.el") ; CMake
-(load-relative "prog/rust.el")  ; Rust
-(load-relative "prog/latex.el") ; LaTeX
-(load-relative "prog/yaml.el")  ; YAML
+(load-relative "prog/antlr.el")  ; ANTLR
+(load-relative "prog/cpp.el")    ; C++
+(load-relative "prog/cmake.el")  ; CMake
+(load-relative "prog/docker.el") ; Docker
+(load-relative "prog/rust.el")   ; Rust
+(load-relative "prog/latex.el")  ; LaTeX
+(load-relative "prog/yaml.el")   ; YAML
 
 (use-package flycheck
   ;; Support proper syntax checking.
