@@ -26,7 +26,6 @@
 (load-relative "prog/docker.el")       ; Docker
 (load-relative "prog/latex.el")        ; LaTeX
 (load-relative "prog/rust.el")         ; Rust
-(load-relative "prog/typescript.el")   ; TypeScript
 (load-relative "prog/yaml.el")         ; YAML
 
 (use-package flycheck
@@ -94,7 +93,7 @@
   ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
   :ensure t
   :after tree-sitter-langs
-  :config (global-tree-sitter-mode)                   ; enable whenever possible
+  :config global-tree-sitter-mode                     ; enable whenever possible
   :hook (tree-sitter-after-on . tree-sitter-hl-mode)) ; syntax highlighting
 
 (use-package tree-sitter-langs
@@ -102,6 +101,7 @@
   ;;
   ;; For more information, see
   ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
-  :ensure t)
+  :ensure t
+  :after tree-sitter)
 
 ;;; prog.el ends here
