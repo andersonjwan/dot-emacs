@@ -93,7 +93,7 @@
   ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
   :ensure t
   :after tree-sitter-langs
-  :config global-tree-sitter-mode                     ; enable whenever possible
+  :config (global-tree-sitter-mode)                   ; enable whenever possible
   :hook (tree-sitter-after-on . tree-sitter-hl-mode)) ; syntax highlighting
 
 (use-package tree-sitter-langs
@@ -101,7 +101,6 @@
   ;;
   ;; For more information, see
   ;; https://github.com/emacs-tree-sitter/elisp-tree-sitter
-  :ensure t
-  :after tree-sitter)
+  :ensure t)
 
 ;;; prog.el ends here
