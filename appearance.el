@@ -33,6 +33,6 @@
   (doom-themes-enable-italic t))
 
 ;; Set startup theme
-(load-theme 'doom-dracula t)
+(load-theme 'doom-material t)
 
 ;;; appearance.el ends here

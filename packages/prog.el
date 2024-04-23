@@ -79,6 +79,13 @@
   :hook (lsp-mode . lsp-enable-which-key-integration)
   :commands lsp)
 
+(use-package magit
+  ;; Support the popular Version Control System (VCS) known as Git.
+  ;;
+  ;; For more information, see:
+  ;; https://magit.vc
+  :ensure t)
+
 (use-package lsp-ui
   ;; Display LSP information within the buffer.
   ;;
