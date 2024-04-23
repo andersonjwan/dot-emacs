@@ -86,6 +86,22 @@
   ;; https://magit.vc
   :ensure t)
 
+(use-package diff-hl
+  ;; Highlight changes with Version Control Systems (VCSs).
+  ;;
+  ;; For more information, see:
+  ;; https://github.com/dgutov/diff-hl
+  :ensure t
+  :hook (prog-mode . global-diff-hl-mode)
+
+  ;; Ensure that `diff-hl' is called at the appropriate time.
+  ;;
+  ;; This syncs with `magit' upon refreshing the relevant buffers. For more
+  ;; information, see:
+  ;; https://github.com/dgutov/diff-hl?tab=readme-ov-file#magit
+  :hook (magit-pre-refresh . diff-hl-magit-pre-refresh)
+  :hook (magit-post-refresh . diff-hl-magit-post-refresh))
+
 (use-package lsp-ui
   ;; Display LSP information within the buffer.
   ;;
