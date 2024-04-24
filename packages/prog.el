@@ -93,6 +93,7 @@
   ;; https://github.com/dgutov/diff-hl
   :ensure t
   :hook (prog-mode . global-diff-hl-mode)
+  :hook (prog-mode . diff-hl-flydiff-mode)
 
   ;; Ensure that `diff-hl' is called at the appropriate time.
   ;;
@@ -100,7 +101,9 @@
   ;; information, see:
   ;; https://github.com/dgutov/diff-hl?tab=readme-ov-file#magit
   :hook (magit-pre-refresh . diff-hl-magit-pre-refresh)
-  :hook (magit-post-refresh . diff-hl-magit-post-refresh))
+  :hook (magit-post-refresh . diff-hl-magit-post-refresh)
+
+  :custom (diff-hl-flydiff-delay 0.01))
 
 (use-package lsp-ui
   ;; Display LSP information within the buffer.
