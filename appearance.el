@@ -26,6 +26,12 @@
 
 ;;; Themes
 
+;; Add local path.
+;;
+;; This adds the `~/.emacs.d/themes/' path to the list of paths to search from
+;; when loading locally installed themes.
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
 (use-package doom-themes
   :ensure t
   :custom
@@ -33,6 +39,6 @@
   (doom-themes-enable-italic t))
 
 ;; Set startup theme
-(load-theme 'doom-dracula t)
+(load-theme 'dracula-pro-alucard t)
 
 ;;; appearance.el ends here
