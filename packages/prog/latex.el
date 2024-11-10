@@ -31,7 +31,8 @@
   (TeX-master nil) ; prompt for master file for multifile document structure
   (TeX-parse-self t)
   (TeX-indent-open-delimiters "[")
-  (TeX-indent-close-delimiters "]"))
+  (TeX-indent-close-delimiters "]")
+  (font-latex-fontify-sectioning 'color))
 
 (use-package reftek
   ;; Support LaTeX labels, references, and citations.
