@@ -32,7 +32,8 @@
   (TeX-parse-self t)
   (TeX-indent-open-delimiters "[")
   (TeX-indent-close-delimiters "]")
-  (font-latex-fontify-sectioning 'color))
+  (font-latex-fontify-sectioning 'color)
+  (font-latex-fontify-script nil))
 
 (use-package reftek
   ;; Support LaTeX labels, references, and citations.
