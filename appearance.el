@@ -39,6 +39,6 @@
   (doom-themes-enable-italic t))
 
 ;; Set startup theme
-(load-theme 'dracula-pro-alucard t)
+(load-theme 'doom-dracula t)
 
 ;;; appearance.el ends here
