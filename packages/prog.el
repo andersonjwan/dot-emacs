@@ -25,6 +25,7 @@
 (load-relative "prog/cmake.el")        ; CMake
 (load-relative "prog/docker.el")       ; Docker
 (load-relative "prog/latex.el")        ; LaTeX
+(load-relative "prog/python.el")       ; Python
 (load-relative "prog/rust.el")         ; Rust
 (load-relative "prog/yaml.el")         ; YAML
 
