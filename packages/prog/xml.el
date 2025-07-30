@@ -24,6 +24,8 @@
   :mode (("\\.xml\\'" . nxml-mode)
          ("\\.sdf\\'" . nxml-mode))
 
+  :hook (nxml-mode . display-line-numbers-mode)
+
   :custom
   (nxml-child-indent 4))
 
